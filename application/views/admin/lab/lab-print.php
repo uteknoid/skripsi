@@ -56,7 +56,7 @@ public function rptDetailData () {
             $this->Ln(10);
             $this->Ln(10);
             $this->SetFont("", "B", 12);
-            $this->SetX($left); $this->Cell(0, 20, 'LAPORAN DATA PEMINJAMAN ALAT', 0, 1,'C');
+            $this->SetX($left); $this->Cell(0, 20, 'LAPORAN DATA PENGGUNAAN LAB', 0, 1,'C');
             $this->Ln(10);
         }
     }

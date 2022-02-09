@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Aplikasi Peminjaman Alat <?php foreach ($option as $u) { echo $u->nama; }?></title>
+  <title>Aplikasi Manajemen LAB <?php foreach ($option as $u) { echo $u->nama; }?></title>
   <!-- Tell the browser to be responsive to screen width -->
 
 

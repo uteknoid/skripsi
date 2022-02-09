@@ -218,11 +218,25 @@ class Auth extends CI_Controller
 
     public function gunakan_daftar()
     {
+
+        $tanggal = $this->input->post('tanggal', true);
+
+        $day = date('D', strtotime($tanggal));
+        $dayList = array(
+            'Sun' => 'Minggu',
+            'Mon' => 'Senin',
+            'Tue' => 'Selasa',
+            'Wed' => 'Rabu',
+            'Thu' => 'Kamis',
+            'Fri' => 'Jumat',
+            'Sat' => 'Sabtu'
+        );
+        $hari = $dayList[$day];
         $data = [
 
             'npm' => htmlspecialchars($this->input->post('npm', true)),
             'nama_matkul' => htmlspecialchars($this->input->post('nama_matkul', true)),
-            'hari' => htmlspecialchars($this->input->post('hari', true)),
+            'hari' => $hari,
             'tanggal' => htmlspecialchars($this->input->post('tanggal', true)),
             'jam_awal' => htmlspecialchars($this->input->post('jam_awal', true)),
             'jam_akhir' => htmlspecialchars($this->input->post('jam_akhir', true)),

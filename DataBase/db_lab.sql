@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 05, 2022 at 11:06 AM
+-- Generation Time: Feb 09, 2022 at 03:10 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.4.21
 
@@ -60,14 +60,6 @@ CREATE TABLE `jadwal_lab` (
   `dosen_pengampu` varchar(30) DEFAULT NULL,
   `status` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `jadwal_lab`
---
-
-INSERT INTO `jadwal_lab` (`id`, `npm`, `nama_matkul`, `hari`, `tanggal`, `jam_awal`, `jam_akhir`, `ruang`, `dosen_pengampu`, `status`) VALUES
-(23, 1234567890, 'asdfasdf ass', 'Jumat', '2022-02-04', '00:00:00', '02:00:00', 'Laboratorium 2', 'Dosen TI', 'Selesai'),
-(24, 1234567890, 'dsgsdfgsdfgsdfg', 'Jumat', '2022-02-04', '01:28:00', '03:28:00', 'Laboratorium 1', 'Dosen TI', 'Selesai');
 
 -- --------------------------------------------------------
 
@@ -167,13 +159,6 @@ CREATE TABLE `pinjam` (
   `proses` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `pinjam`
---
-
-INSERT INTO `pinjam` (`id`, `nim`, `nama`, `tujuan`, `nama_alat`, `kondisi`, `jumlah_alat`, `tgl_pinjam`, `tgl_kembali`, `jaminan`, `proses`) VALUES
-(40, 1234567890, 'Rafli Fadillah', 'adgasgasdfgad', 'Krimping', 'Rusak Ringan', 3, '2022-02-04', '2022-02-04', 'ktp', 'Selesai');
-
 -- --------------------------------------------------------
 
 --
@@ -264,8 +249,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`npm`, `name`, `email`, `password`, `hp`, `qrlog`, `role_id`, `is_active`) VALUES
 ('123', 'Admin', 'admin@uncp.ac.id', '$2y$10$2OQ0DvgPbTOA0pCW.yunuOjbM5rCSx3YWIVqFKwnZn5zrJJvnv8oS', '081234567890', 'ivFH5jiPFl', 1, 1),
 ('12345', 'Dosen TI', 'motorjadul5@gmail.com', '$2y$10$9ug1207m03dSG07.YJdNC.0LEcx.STMiOdJlzKBjjM41hf6Vs8hey', '087869767818', 'd9zMj33JYq', 2, 1),
-('1234554321', 'Muh Rafli Fadillah', 'email1@mail.com', '$2y$10$KQ0g45FDVmHSib1ml8CQh.aelglTFyVgfuULBa/P60IBZOMqXvi.2', '087654321456', 'nxLBrkWVvK', 3, 1),
-('1234567890', 'Rafli Fadillah', 'email@mail.com', '$2y$10$G5C2VUNfJGLdSvP8Ox/snOUaNOMd2IRnYcpaeejwqq2yXmmJ/DPM2', '085656767654', 'sGvHhl0KXK', 3, 0);
+('1234567890', 'Rafli Fadillah', 'email@mail.com', '$2y$10$G5C2VUNfJGLdSvP8Ox/snOUaNOMd2IRnYcpaeejwqq2yXmmJ/DPM2', '085656767654', 'Eeq63f26Oc', 3, 1);
 
 --
 -- Indexes for dumped tables
@@ -340,7 +324,7 @@ ALTER TABLE `alat`
 -- AUTO_INCREMENT for table `jadwal_lab`
 --
 ALTER TABLE `jadwal_lab`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `option_laporan`
@@ -358,7 +342,7 @@ ALTER TABLE `pengeluaran`
 -- AUTO_INCREMENT for table `pinjam`
 --
 ALTER TABLE `pinjam`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `ruang_lab`
